@@ -18,14 +18,14 @@ namespace PersonalizedRecommendationEngine.Logic
             services.AddSingleton<MLContext>(new MLContext());
             services.AddSingleton<IDatabaseService, DatabaseService>(sp => new DatabaseService(dbPath));
             services.AddSingleton<IDatabaseSetup, DatabaseSetup>();
-            services.AddSingleton<IDataImporter, DataImporter>();
-            services.AddSingleton<IDataLoader, DataLoader>(sp => new DataLoader(dbPath, sp.GetRequiredService<MLContext>()));
-            services.AddSingleton<IDataPreprocessor, DataPreprocessor>(sp => new DataPreprocessor(sp.GetRequiredService<MLContext>(), sp.GetRequiredService<IDataLoader>()));
-            services.AddSingleton<IRecommendationModelTrainer, RecommendationModelTrainer>(sp => new RecommendationModelTrainer(sp.GetRequiredService<MLContext>()));
-            services.AddSingleton<IPlayerRepository, PlayerRepository>();
-            services.AddSingleton<IBetRepository, BetRepository>();
-            services.AddSingleton<IOfferingRepository, OfferingRepository>();
-            services.AddSingleton<IRecommendationService, RecommendationService>();
+            services.AddSingleton<IRecommendationModelTrainer, RecommendationModelTrainer>();
+            services.AddTransient<IDataImporter, DataImporter>();
+            services.AddScoped<IDataLoader, DataLoader>(sp => new DataLoader(dbPath, sp.GetRequiredService<MLContext>()));
+            services.AddScoped<IDataPreprocessor, DataPreprocessor>(sp => new DataPreprocessor(sp.GetRequiredService<MLContext>(), sp.GetRequiredService<IDataLoader>()));
+            services.AddScoped<IPlayerRepository, PlayerRepository>();
+            services.AddScoped<IBetRepository, BetRepository>();
+            services.AddScoped<IOfferingRepository, OfferingRepository>();
+            services.AddScoped<IRecommendationService, RecommendationService>();
 
             return services;
         }
