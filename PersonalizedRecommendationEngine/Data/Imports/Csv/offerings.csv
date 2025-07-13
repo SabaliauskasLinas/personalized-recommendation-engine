@@ -1,0 +1,6 @@
+Id,PlayerId,Sport,Tournament,TeamId,Sport,Tournament,Team,Selection,OddsAmount,EventDate
+1,Soccer,Premier League,Liverpool,Over 2.5,1.80,2025-07-13
+2,Soccer,La Liga,Real Madrid,1X2 Home,2.00,2025-07-14
+3,Basketball,NBA,Warriors,Point Spread +3.5,1.90,2025-07-13
+4,Tennis,Wimbledon,Nadal,Match Winner,1.70,2025-07-14
+5,Soccer,Serie A,AC Milan,Under 2.5,2.05,2025-07-15

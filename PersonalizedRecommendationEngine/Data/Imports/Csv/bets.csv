@@ -1,0 +1,7 @@
+Id,PlayerId,Sport,Tournament,Team,Selection,BetAmount,OddsAmount,BetDate
+1,1,Soccer,Premier League,Arsenal,Over 2.5,10.00,2.50,2025-07-01
+2,1,Soccer,Premier League,Manchester United,1X2 Home,15.00,1.80,2025-07-02
+3,2,Soccer,La Liga,Barcelona,Under 3.5,20.00,1.95,2025-07-05
+4,3,Basketball,NBA,Lakers,Point Spread -5.5,25.00,2.10,2025-07-06
+5,4,Soccer,Serie A,Juventus,Over 1.5,12.50,1.65,2025-07-07
+6,5,Tennis,Wimbledon,Federer,Match Winner,30.00,1.75,2025-07-08
