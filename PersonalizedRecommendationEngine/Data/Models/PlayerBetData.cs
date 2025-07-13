@@ -3,7 +3,7 @@
     public class PlayerBetData
     {
         public long PlayerId { get; set; }
-        public int Age { get; set; }
+        public float Age { get; set; }
         public string Country { get; set; }
         public string Gender { get; set; }
         public DateTime RegistrationDate { get; set; }
